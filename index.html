@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $.getScript('https://developers.kakao.com/sdk/js/kakao.js').then(function(){
+                Kakao.init('2f1a563b56e3d759df4602ec0b946352');
+                console.log(Kakao.isInitialized());
+                Kakao.Link.createScrapButton({
+                    container: '#create-kakao-link-btn',
+                    requestUrl: 'https://developers.kakao.com',
+                });
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <a id="create-kakao-link-btn" href="javascript:;">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+  
+</script>
+</body>
+</html>
